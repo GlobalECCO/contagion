@@ -1,0 +1,109 @@
+.playbackControlsContainer
+{
+  position: fixed;
+  display: inline-block;
+  background: black;
+  border: 4px solid #019cdd;
+  border-radius: 32px 0px 0px 0px;
+  border-width: 4px 0px 0px 4px;
+  width: auto;
+  height: 26px;
+  float: right;
+  bottom: 0px;
+  right: 0px;
+  padding: 10px;
+  padding-left: 14px;
+  z-index: 10px;
+  vertical-align: top;
+  cursor: default;
+}
+
+.playbackButton
+{
+  margin: 0px;
+  display: inline-block;
+  background-size: 100%;
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  border: 2px solid black;
+}
+.playbackButton:hover
+{
+  border-color: white;
+}
+.playbackButton[disabled]
+{
+  cursor: default;
+}
+.playbackButton[disabled]:hover
+{
+  border-color: black;
+}
+
+.playbackCurrentState
+{
+  display: inline-block;
+  width: auto;
+  min-width: 45px;
+  /*height: 25px;*/
+  border: 2px solid gray;
+  background: #444444;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 5px;
+  padding-left: 4px;
+  padding-right: 4px;
+  position: relative;
+  top: -10px;
+}
+
+.playbackCurrentStateText
+{
+  display: inline-block;
+  position: relative;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  vertical-align: top;
+  margin: 0px;
+  width: 100%;
+}
+
+.playbackStart
+{
+  background-image: url('images/icon_playback_start-100px.png');
+}
+.playbackStart[disabled]
+{
+  background-image: url('images/icon_playback_start_gray-100px.png');
+}
+
+.playbackBack
+{
+  background-image: url('images/icon_playback_back-100px.png');
+}
+.playbackBack[disabled]
+{
+  background-image: url('images/icon_playback_back_gray-100px.png');
+}
+
+.playbackForward
+{
+  background-image: url('images/icon_playback_forward-100px.png');
+}
+.playbackForward[disabled]
+{
+  background-image: url('images/icon_playback_forward_gray-100px.png');
+}
+
+.playbackEnd
+{
+  background-image: url('images/icon_playback_end-100px.png');
+}
+.playbackEnd[disabled]
+{
+  background-image: url('images/icon_playback_end_gray-100px.png');
+}

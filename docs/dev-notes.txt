@@ -1,0 +1,37 @@
+Problems
+
+- having to pass many callbacks down an object chain
+  - ex. the UI object taking several functions in it's contstructors and managing them
+
+- no clear distinction as to what object in the chain should be responsible for things.
+  - ex. the UI object (again) handling some things itself and other things called back from
+    other UI based objects
+
+- destroying html and recreating it all the time
+
+- Too many anonymous functions
+
+- using the same visual metaphor for non clickable (non interactive) things as clickable ones (like buttons)
+
+- Be more intentional about what functions/variables are "public (i.e. this.)" and which are "private" (i.e. var)
+
+- difficult to synchronize gamestate changes with ui transitions/fx
+
+- the dom is a giant global grab bag... should access be limited and how?
+
+Solutions
+
+- establish a better pattern for callback usage
+
+- check out https://github.com/flightjs/flight
+
+- dynamically modify existing html instead of destroy - create
+
+- always name functions
+
+- focus on modularity - INDEPENDENT pieces, MVC?
+  - maybe separate 'views' out and poll the model to determine how things get displayed
+
+- never access globals from objects - have a separate special object that is used to interact with globals
+
+- use the mediator pattern for signal slot connection

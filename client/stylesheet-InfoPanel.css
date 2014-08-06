@@ -1,0 +1,88 @@
+/*******************************************************************************
+ * Styles for the Information Panel UI elements
+ ******************************************************************************/
+
+/* The main container for all UI elements the Info Panel needs */
+.infoPanelContainer
+{
+  width: 40%;
+  height: 50px;
+  border: #dddddd solid 2px;
+  background: #333333;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 7px 7px 50px #000000;
+  text-align: center;
+  padding-top: 0px;
+  display: block;
+  z-index: 0;
+  position: fixed;
+  left: 30%;
+  border-radius: 0px 0px 16px 16px; 
+}
+
+/* Instruction messages for what the player should do at the given moment */
+.infoPanelText
+{
+  width: 100%;
+  height: 50%;
+  vertical-align: bottom;
+  color: #FFFFFF;
+  font-family: sans-serif;
+  font-size: 13px;
+  cursor: default;
+  line-height: 2em;
+}
+
+/* The list of users in this game */
+.infoPanelUserList
+{
+  width: 100%;
+  height: 50%;
+  background-color: #000000;
+  /* border-radius: 0px 0px 16px 16px; */
+}
+
+/* Container for all UI elements that represent a given player */
+.infoPanelUserContainer
+{
+  display: inline-block;
+  text-align: center;
+  height: 100%;
+  margin: 0px;
+  background-color: black;
+  /*padding: 2px;*/
+  vertical-align: top;
+  color: white;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+/* The icon representing the player's ideology type */
+.infoPanelUserIcon
+{
+  background-size: 100%;
+  float: left;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  display: inline-block;
+  margin: auto;
+  padding: 2px;
+}
+
+/* The player's user name */
+.infoPanelUserName
+{
+  width: 30%;
+  height: 100%;
+  display: inline-block;
+  margin-top: 6px;
+  cursor: default;
+}
+
+/* Indication that this player has taken a turn
+.infoPanelUserReady
+See UI.js/onGameStart
+*/

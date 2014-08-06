@@ -1,0 +1,149 @@
+.tutorialBackground {
+  background-color:rgba(115, 160, 173, 0.60);
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 300;
+}
+
+.tutorialForeground {
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 400;
+}
+
+.tutorialButtonContainer {
+  bottom: 0px;
+  right: 0px;
+  position: fixed;
+  padding: 2px;
+  padding-left: 12px;
+  padding-top: 4px;
+  background: black;
+  color: white;
+  border: 4px solid #019cdd;
+  border-radius: 32px 0px 0px 0px;
+  z-index: 500;
+  font-weight: bold;
+}
+
+.boundingBox, .svgBoundingBox {
+  position: fixed;
+  border: 5px solid rgb(154, 255, 206);
+  z-index: 300;
+}
+
+.svgBoundingBox {
+  border: none;
+}
+
+.highlightCircle {
+  cursor: pointer;
+  position: fixed;
+  outline: 3px solid yellow;
+  -webkit-animation:pulse-size 1000ms ease-in-out infinite;
+     -moz-animation:pulse-size 1000ms ease-in-out infinite;
+      -ms-animation:pulse-size 1000ms ease-in-out infinite;
+       -o-animation:pulse-size 1000ms ease-in-out infinite;
+          animation:pulse-size 1000ms ease-in-out infinite;
+}
+
+.tutorialSVGElement {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes pulse-size {
+  0%, 100% {
+    outline-width: 3px;
+  }
+
+  50% {
+    outline-width: 7px;
+  }
+}
+
+@-webkit-keyframes pulse-size {
+  0%, 100% {
+    outline-width: 3px;
+  }
+
+  50% {
+    outline-width: 7px;
+  }
+}
+
+.tutorialLabel
+{
+  display: inline-block;
+  font-family: sans-serif;
+  margin-bottom: 14px;
+}
+
+.tutorialButton
+{
+  text-align: center;
+  cursor: pointer;
+  width: 76px;
+  height: 20px;
+  font-family: sans-serif;
+  vertical-align: middle;
+  margin: 4px;
+  box-shadow: 2px 2px 6px 0px #141414;
+  border: solid 2px white;
+  color: white;
+  border-radius: 5px;
+  background: black;
+}
+
+.tutorialButton:hover
+{
+  color: yellow;
+  border: outset;
+  border-color: yellow;
+  border-width: 2px;
+}
+
+.tutorialButton:active
+{
+  color: rgb(255, 75, 75);
+  border: inset;
+  border-color: red;
+  border-width: 2px;
+}
+
+.restartTutorialButton
+{
+  display: inline-block;
+  width: auto;
+  padding: 4px
+}
+
+.endTutorialButton
+{
+  display: inline-block;
+  width: auto;
+  padding: 4px
+}
+
+/*openTips font size overwrite for the tip contents*/
+.style-tutorialTips .ot-content
+{
+  color: black;
+}
+
+.style-tutorialTips .ot-title
+{
+  color: black;
+}
+
+.style-tutorialActionTips .ot-content
+{
+  color: yellow;
+}

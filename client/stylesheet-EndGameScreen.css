@@ -1,0 +1,97 @@
+.endGameScreen
+{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  background-image: url('images/BLACK_50percentOpacity.png');
+  background-size: 100%;
+  position: absolute;
+  top: 0px;
+}
+
+.endGamePopUp
+{
+  position:relative;
+  display: inline-block;
+  background: #153363;
+  border: 4px solid white;
+  border-radius: 40px;
+  padding: 20px;
+  /*width: 100%;*/
+  height: 500x;
+  text-align: center;
+  margin: auto;
+  margin-top: 200px;
+  box-shadow: 7px 7px 50px #000000;
+  z-index: 1000;
+}
+
+.endGamePopUp:hover
+{
+  cursor: pointer;
+}
+
+.winnerContainer
+{
+  display: inline-block;
+  margin-left: auto;
+  border-radius: 20px;
+  background: #355373;
+  height: 80%;
+  width: 240px;
+  margin: 20px;
+  padding: 8px;
+}
+
+.gameOver
+{
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+  cursor: inherit;
+}
+
+.winnerIcon
+{
+  width: 100px;
+  height: 100px;
+  border: 4px solid black;
+  border-radius: 100%;
+  margin: auto;
+}
+
+.winnerIdeologyName
+{
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  color: white;
+  cursor: inherit;
+}
+
+.winnerText
+{
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: #F7DB05;
+  cursor: inherit;
+}
+
+.winnerUserID
+{
+  font-family: sans-serif;
+  font-size: 16px;
+  color: white;
+  cursor: inherit;
+}
+
+.endGameScreenCloseButton
+{
+  position: fixed;
+  right: 2px;
+  top: 2px;
+  background-image: ('images/icon_cancel2-100px.png');
+}

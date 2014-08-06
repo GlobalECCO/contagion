@@ -1,0 +1,273 @@
+/*******************************************************************************
+ * Styles for the Player Setup UI elements
+ ******************************************************************************/
+
+.gamelogoContainer
+{
+  position: absolute;
+  display:block;
+  /*margin-top:2%;*/
+  margin-left:auto;
+  margin-right:auto;
+  /*background: #AA0000;*/
+  width: 100%;
+  height: 100%;
+  z-index: -10000;
+  clear:both;
+  top: 0px;
+}
+
+.gamelogo
+{
+  display: block;
+  margin: auto;
+  background-image: url('images/contagion_logo.png');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-color: #083f4b;
+  background-position: center 60%;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+
+}
+
+#playerSetupRoot
+{
+  position: relative;
+  top: 8%;
+}
+
+/* The main container for the player setup widgets */
+.playerSetupContainer
+{
+  width: 275px;
+  height: 222px;
+  border-radius: 10px;
+  border: 2px solid #FFFFFF;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:2%;
+  position: static;
+  background: #2278D4;
+}
+
+/* The top bar of the player setup container */
+.playerSetupTopBar
+{
+  background: #85B2E5;
+  border: 2px solid #FFFFFF;
+  color: #062446;
+  font-family: sans-serif;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  height: 25px;
+  margin: 0px;
+  margin-top: -2px;
+  margin-left: -2px;
+  padding: 0px;
+  border-radius: 10px 10px 0px 0px;
+  position: relative;
+  cursor: default;
+}
+
+/* The header text in the top bar of the player setup container */
+.playerSetupHeaderText
+{
+  vertical-align: middle;
+  margin: auto;
+  margin-top: 8px;
+}
+
+/* Containers for the various options a player has during setup */
+.ideologyNameRoot, .ideologyTypeRoot
+{
+  display: inline-block;
+  padding: 10px 0px;
+  vertical-align: middle;
+  width: 100%;
+  cursor: default;
+}
+.colorPickRoot
+{
+  display: inline-block;
+  padding: 10px 0px;
+  vertical-align: middle;
+  width: 100%;
+  cursor: default;
+}
+.submitRoot
+{
+  display: block;
+  padding: 10px 0px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Styles for player setup labels */
+.textLabelIdeologyName, .textLabelIdeologyType, .colorPickLabel
+{
+  /*background-color: red;*/
+  color: #FFFFFF;
+  display: inline-block;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  margin-left: 10px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/* A text edit widget */
+.textInputField
+{
+  /*background-color: blue;*/
+  border: 3px solid #808080;
+  color: #000000;
+  display: inline-block;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  position: relative;
+  padding-left: 3px;
+  left: 13px;
+  width: 48%;
+}
+
+/* A combo box for selecting an ideology type */
+.comboIdeologyType
+{
+  position: relative;
+  border: 3px solid #7D7D7D;
+  color: #000000;
+  display: inline-block;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  width: 141px;
+  left: 19px;
+  width: 144px;
+}
+
+/* A container for the list of player color buttons */
+#colorRadioButtons
+{
+  position: absolute;
+  left: 83px;
+  top: 82px;
+  position: relative;
+  left: 74px;
+  top: -1px;
+}
+
+/* A button representing a potential player color */
+.colorRadio
+{
+  display: none;
+}
+.colorRadio + LABEL
+{
+  -webkit-appearance: none;
+  border: 3px solid #CACECE;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 9px;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin-left: 2px;
+  margin-right: 2px;
+  cursor: pointer;
+}
+.colorRadio:checked + LABEL:after
+{
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  font-size: 32px;
+  background-position: center;
+  background-color: transparent;
+}
+.colorRadio:checked + LABEL
+{
+  background-color: #E9ECEE;
+  border: 3px solid #000000;
+  color: #FFA1A7;
+  border: 3px solid #ADB8C0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1), inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+  cursor: default;
+}
+.colorRadio + LABEL:active, .colorRadio:checked + LABEL:active
+{
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5), inset 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* The button to submit the chosen options */
+.submitButton
+{
+  display: block;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0));
+  background: -moz-linear-gradient(top, #3d94f6 5%, #1e62d0 100%);
+  background: -webkit-linear-gradient(top, #3d94f6 5%, #1e62d0 100%);
+  background: -o-linear-gradient(top, #3d94f6 5%, #1e62d0 100%);
+  background: -ms-linear-gradient(top, #3d94f6 5%, #1e62d0 100%);
+  background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0',GradientType=0);
+  background-color: #3D94F6;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #337FED;
+  color: #FFFFFF;
+  font-family: arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px #1570CD;
+  /*[empty]width:;*/
+  /*[empty]height:;*/
+  /*+placement:margin-auto 0px -1px;*/
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  left: 0px;
+  top: -1px;
+  cursor: pointer;
+}
+.submitButton:hover
+{
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #3d94f6));
+  background: -moz-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
+  background: -webkit-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
+  background: -o-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
+  background: -ms-linear-gradient(top, #1e62d0 5%, #3d94f6 100%);
+  background: linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6',GradientType=0);
+  background-color: #1E62D0;
+}
+.submitButton:active
+{
+  position: relative;
+  top: 1px;
+}
+
+a
+{
+  font-family: sans-serif;
+  color: #449AF5;
+  text-decoration: none;
+}
+a:hover
+{
+  color: #66BBFF;
+}
+a:visited
+{
+  color: #aaaaaa;
+}

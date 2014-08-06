@@ -1,0 +1,9 @@
+.moveArrowContainer
+{
+  background-image: url('images/dir_arrow.png');
+  background-repeat: repeat-x;
+  height: 30px;
+  position: absolute;
+  z-index: 1;
+  background-position: 0% 0%;
+}

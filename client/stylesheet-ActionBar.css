@@ -1,0 +1,167 @@
+/*******************************************************************************
+ * Styles for the Action Bar UI elements
+ ******************************************************************************/
+
+/* Main ActionBar dock widget on the bottom of the screen */
+.actionBar
+{
+  width: 526px;
+  height: 60px;
+  position: fixed;
+  z-index: 10;
+  bottom: 0px;
+  text-align: center;
+  margin-left: -263px;
+  left: 50%;
+}
+
+/* Container of ActionBar icon containers? */
+.actionBarContainer
+{
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+  background: #79C4F2;
+  border-radius: 32px 32px 0px 0px;
+  border: 4px solid #FFFFFF;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+}
+
+/* Container of action buttons */
+.actionBarIconsContainer
+{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  bottom: 30px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/* An individual action button */
+.actionBarIcon
+{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: inline-block;
+  background-size: 100%;
+  vertical-align: middle;
+  border: 2px solid #000000;
+  margin: 2px;
+  position: relative;
+  text-align: center;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+}
+.actionBarIcon:hover
+{
+  border-color: #FFFFFF;
+}
+.actionBarIcon[disabled]
+{
+  border-color: #000000;
+}
+
+.remainingAgentsContainer-old
+{
+  width: 120%;
+  /* height: 14px; */
+  position: absolute;
+  left: -10%;
+  bottom: -14px;
+  text-align: center;
+  /* background: orange; */
+  /* z-index: 9; */
+}
+
+.remainingAgentsContainer
+{
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 100%;
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  border: 18px solid black;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+.remainingAgentsContainer:before,
+.remainingAgentsContainer:after
+{
+  content: '';
+  position: absolute;
+  border-radius: 100%;
+  background-color: black;
+  width: 18px;
+  height: 18px;
+  top: 50px;
+}
+
+.remainingAgentsContainer:before
+{
+  left: -5px;
+}
+
+.remainingAgentsContainer:after
+{
+  right: -5px;
+}
+
+.remainingAgent
+{
+  position: relative;
+  display: none;
+  margin: auto;
+  margin-left: 1px; 
+  margin-right: 1px; 
+  height: 14px;
+  width: 14px;
+  top: 52px;
+  background-image: url('images/icon_agentUpkeep-100px.png');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  border: 2px solid white;
+  /* padding: 1px; */
+  background-color: black;
+  z-index: 11;
+  
+}
+
+.action-recruit[remaining] > .remainingAgentsContainer > .remainingAgent
+{
+  display: inline-block;
+}
+
+/* .action-recruit[remaining="3"] > .remainingAgentsContainer > .remainingAgent:nth-child(2),
+.action-recruit[remaining="1"] > .remainingAgentsContainer > .remainingAgent:first-child, */
+.remainingAgent:nth-child(2)
+{
+  top: 58px;
+}
+
+/* two remaining */
+.action-recruit[remaining="2"] > .remainingAgentsContainer > .remainingAgent:last-child,
+
+/* one remaining  */
+.action-recruit[remaining="1"] > .remainingAgentsContainer > .remainingAgent:last-child,
+.action-recruit[remaining="1"] > .remainingAgentsContainer > .remainingAgent:nth-child(2),
+
+/* one remaining  */
+.action-recruit[remaining="0"] > .remainingAgentsContainer > .remainingAgent
+{
+  /* display: none; */
+  background-image: none;
+  background-color: #79C4F2;
+  border-color: black;
+}

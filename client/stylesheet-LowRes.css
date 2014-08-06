@@ -1,0 +1,144 @@
+/****************************************/
+/*Styles for low resolution displays*/
+/****************************************/
+/****************************************/
+/****************************************/
+
+
+
+
+
+/****************************************/
+/*Action List*/
+/****************************************/
+
+.actionList
+{
+  width: 180px;
+}
+
+/****************************************/
+/*Action Bar*/
+/****************************************/
+
+.actionBar
+{
+  width: 350px;
+  height: 30px;
+  left: 50%;
+  margin-left: -175px;
+}
+
+.actionBarContainer
+{
+  width: 100%;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.actionBarIcon
+{
+  width: 40px;
+  height: 40px;
+}
+
+/****************************************/
+/*Agent Overview*/
+/****************************************/
+
+.agentOverviewAgent
+{
+  width: 25px;
+  height: 25px;
+}
+
+/****************************************/
+/*Options Panel*/
+/****************************************/
+
+.optionsPanelContainer
+{
+  height: 20px;
+}
+
+.optionsPanelButton
+{
+  height: 20px;
+}
+
+/****************************************/
+/*Playback Controls, Options Panel */
+/****************************************/
+
+.playbackControlsContainer
+{
+  height: 20px;
+  padding-left: 10px;
+}
+
+.playbackButton, .optionsPanelButton
+{
+  width: 20px;
+  height: 20px;
+}
+
+.playbackCurrentState
+{
+  height: 20px;
+  min-width: 36px;
+}
+
+.playbackCurrentStateText
+{
+  /*top: -12px;*/
+  font-size: 14px;
+}
+
+/*****************************************/
+/* Message Type, Target, Scope Selectors */
+/*****************************************/
+
+.messageTypeSelectorContainer, .scopeSelectorContainer, .targetSelectorContainer
+{
+  height: 70px;
+}
+
+.messageTypeButton, .scopeButton, .targetButton
+{
+
+  width: 40px;
+  height: 40px;
+}
+
+/*****************************************/
+/*   Scoreboard                          */
+/*****************************************/
+
+/*
+.gameStatus, .scoreboard
+{
+  width: 180px;
+  height: 70px;
+}
+
+.playerNameIcon
+{
+  width: 30px;
+  height: 30px;
+}
+
+.countryScore, .territoryScore, .territoryBonus, .playerScoresSpacer
+{
+  width: 100px;
+  height: 6px;
+}
+
+.territoryBonusTickMark, .territoryBonusTickDisabled
+{
+
+  height: 22px;
+}
+*/
+
+/*****************************************/
+/*   Country Control                     */
+/*****************************************/

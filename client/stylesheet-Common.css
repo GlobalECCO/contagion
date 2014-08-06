@@ -1,0 +1,384 @@
+/***************************************************
+selector specific CSS
+***************************************************/
+*:not(input) {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+HTML:before
+{
+  height: 100%;
+  box-shadow: inset 0 0 100px #000000;
+  margin: 0px;
+  padding: 0px;
+}
+BODY
+{
+  background: #2278D4;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position:absolute;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+tspan {
+  cursor: default;
+}
+
+/*******************************************************************************
+ * Common Style Classes
+ ******************************************************************************/
+/* Change the cursor on this element to the pointer */
+.pointerCursor
+{
+  cursor: pointer;
+}
+
+/* Add a square highlight around the element */
+.highlight
+{
+  outline: solid 2px yellow;
+}
+.highlight:hover
+{
+  outline: solid 4px yellow;
+}
+
+/* Add a circle highlight around the element */
+.circleHighlight
+{
+  margin-left: -4px;
+  margin-top: -4px;
+  /* border-radius: 20px 0px 20px 0px; */
+  border-radius: 100%;
+  border: solid 4px #FFFF00;
+}
+
+.circleHighlight:hover
+{
+  border-color: #FFFFFF;
+}
+
+/* The highlight overlay on top of an action button */
+.iconOverlay, .iconOverlayWide
+{
+  background-image: url('images/icon_overlay-100px.png');
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  opacity: 0.0;
+}
+
+.iconOverlay
+{
+  border-radius: 100%;
+}
+
+.iconOverlay:hover, .iconOverlayWide:hover
+{
+  opacity: 0.8;
+  cursor: pointer;
+}
+.iconOverlay[disabled], .iconOverlayWide[disabled]
+{
+  background-image: none;
+  background: #000000;
+  opacity: 0.6;
+  cursor: default;
+}
+
+.iconOverlayWide
+{
+  position: absolute;
+  top:0px;
+  left: 0px;
+}
+
+/*******************************************************************************
+ * Icon Image URL classes
+ ******************************************************************************/
+
+/* Action Bar */
+.action-attack
+{
+  background-image: url('images/icon_attack-100px.png');
+}
+.action-boost
+{
+  background-image: url('images/icon_boost-100px.png');
+}
+.action-desperation
+{
+  background-image: url('images/icon_desperation-100px.png');
+}
+.action-disable
+{
+  background-image: url('images/icon_disable-100px.png');
+}
+.action-escape
+{
+  background-image: url('images/icon_escape-100px.png');
+}
+.action-moveagent
+{
+  background-image: url('images/icon_moveagent-100px.png');
+}
+.action-move
+{
+  background-image: url('images/icon_move-100px.png');
+}
+.action-recruit
+{
+  background-image: url('images/icon_recruit-100px.png');
+}
+.action-remove
+{
+  background-image: url('images/icon_remove-100px.png');
+}
+.action-shift
+{
+  background-image: url('images/icon_shift-100px.png');
+}
+.action-withdraw
+{
+  background-image: url('images/icon_withdraw-100px.png');
+}
+
+/*Styles for ActionList Items in Income Container*/
+.actionPoints-agentUpkeep
+{
+  background-image: url('images/icon_agentUpkeep-100px.png');
+}
+.actionPoints-territoryControl
+{
+  background-image: url('images/icon_territoryControl-100px.png');
+}
+.actionPoints-countryControl
+{
+  background-image: url('images/icon_countryControl-100px.png');
+}
+.actionPoints-bankedResources
+{
+  background-image: url('images/icon_bankedResources-100px.png');
+}
+.actionPoints-defaultIncome
+{
+  background-image: url('images/icon_defaultIncome-100px.png');
+}
+
+/* Disabled icons */
+.action-attack[disabled]
+{
+  background-image: url('images/icon_attack_gray-100px.png');
+}
+.action-boost[disabled]
+{
+  background-image: url('images/icon_boost_gray-100px.png');
+}
+.action-desperation[disabled]
+{
+  background-image: url('images/icon_desperation_gray-100px.png');
+}
+.action-disable[disabled]
+{
+  background-image: url('images/icon_disable_gray-100px.png');
+}
+.action-escape[disabled]
+{
+  background-image: url('images/icon_escape_gray-100px.png');
+}
+.action-moveagent[disabled]
+{
+  background-image: url('images/icon_moveagent_gray-100px.png');
+}
+.action-move[disabled]
+{
+  background-image: url('images/icon_move_gray-100px.png');
+}
+.action-recruit[disabled]
+{
+  background-image: url('images/icon_recruit_gray-100px.png');
+}
+.action-remove[disabled]
+{
+  background-image: url('images/icon_remove_gray-100px.png');
+}
+.action-shift[disabled]
+{
+  background-image: url('images/icon_shift_gray-100px.png');
+}
+.action-withdraw[disabled]
+{
+  background-image: url('images/icon_withdraw_gray-100px.png');
+}
+
+/*Styles for ActionList Items in Submit Container*/
+.actionListSubmitTurn[disabled]
+{
+  background-image: url('images/icon_submit_gray-100px.png');
+}
+
+.actionListClearActions[disabled]
+{
+  background-image: url('images/icon_cancel_gray-100px.png');
+}
+
+.desperationUsed, .desperationUsed:disabled
+{
+  background-image: url('images/icon_desperation_used-100px.png');
+}
+
+.gradientOverlay
+{
+  background-image: url('images/gradient-whiteToTrans_2px-64px.png');
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+
+/* Action List */
+.actionListItem
+{
+  background-image: url('images/gradient-whiteToTrans_2px-64px.png');
+}
+.actionListSubmitTurn
+{
+  background-image: url('images/icon_submit-100px.png');
+}
+.actionListToggleView
+{
+  background-image: url('images/icon_toggle-100px.png');
+}
+.actionListTaxes
+{
+  background-image: url('images/icon_tax-100px.png');
+}
+.actionListClearActions
+{
+  background-image: url('images/icon_cancel-100px.png');
+}
+
+/* Agent Overview */
+
+/* Action Scope */
+.globalScopeButton
+{
+  background-image: url('images/icon_ActionScope_Global-100px.png');
+}
+.broadScopeButton
+{
+  background-image: url('images/icon_ActionScope_Broad-100px.png');
+}
+.localScopeButton
+{
+  background-image: url('images/icon_ActionScope_Local-100px.png');
+}
+
+/* Agent Type */
+.agentType1
+{
+  background-image: url('images/icon_AgentType1-100px.png');
+}
+.agentType2
+{
+  background-image: url('images/icon_AgentType2-100px.png');
+}
+.agentType3
+{
+  background-image: url('images/icon_AgentType3-100px.png');
+}
+
+/* Ideology Type */
+.ideologyType-1
+{
+  background-image: url('images/icon_agent-100px.png');
+}
+.ideologyType0
+{
+  background-image: url('images/icon_Ideology_0-100px.png');
+}
+.ideologyType1
+{
+  background-image: url('images/icon_Ideology_1-100px.png');
+}
+.ideologyType2
+{
+  background-image: url('images/icon_Ideology_2-100px.png');
+}
+.ideologyType3
+{
+  background-image: url('images/icon_Ideology_3-100px.png');
+}
+
+/* Message Type */
+.negativeMessageType
+{
+  background-image: url('images/icon_MessageType_Negative-100px.png');
+}
+.neutralMessageType
+{
+  background-image: url('images/icon_MessageType_Both-100px.png');
+}
+.positiveMessageType
+{
+  background-image: url('images/icon_MessageType_Positive-100px.png');
+}
+
+/* Game Status */
+.gameStatusToggleStatus
+{
+  background-image: url('images/icon_toggle-100px.png');
+}
+
+/* Options */
+#optionsMusicOn
+{
+  background-image: url('images/icon_music_on-100px.png');
+}
+
+#optionsMusicOn
+{
+  background-image: url('images/icon_music_on-100px.png');
+}
+
+/* Player Setup */
+.ideologyNameRoot, .ideologyTypeRoot, .colorPickRoot, .submitRoot
+{
+  background-image: url('images/gradient-whiteToTrans_2px-64px.png');
+}
+.colorRadio:checked + LABEL:after
+{
+  background-image: url('images/checkmark.png');
+}
+
+.countryControlIcon
+{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-size: 100%;
+  border-radius: 100%;
+  border: 2px solid black;
+  pointer-events:none;
+  z-index: -10;
+}
+
+tspan {
+  font-family: sans-serif;
+  font-size: 40px;
+  color: white;
+  fill: black;
+  font-weight: bold;
+}
+
+.hide-element
+{
+  display: none;
+}

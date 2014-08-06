@@ -1,0 +1,23 @@
+/*******************************************************************************
+ * Styles for the Information Panel UI elements
+ ******************************************************************************/
+
+/* The main container for Action Points Animator */
+.actionPointsContainer
+{
+  position: absolute;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 48px;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  width: 100px;
+  height: 80px;
+  border-radius: 100%;
+  border: 4px solid white;
+  background: black;
+  padding-top: 10px;
+}
+
+

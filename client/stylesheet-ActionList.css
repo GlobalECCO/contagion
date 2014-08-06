@@ -1,0 +1,347 @@
+/*******************************************************************************
+ * Styles for the Action List UI elements
+ ******************************************************************************/
+
+/* The main ActionList dock widget on the right side of the screen */
+.actionList
+{
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  margin-right: 12px;
+  float: right;
+  width: 220px;
+  height: 900px;
+}
+.previousActionList
+{
+  position: fixed;
+  margin-bottom: 40px;
+  margin-right: 40px;
+  width: 220px;
+  float: left;
+  z-index: 1;
+}
+
+/* Containers of individual ActionList items */
+.actionListStartingResourcesContainer, .actionListActionsContainer, .actionListTaxesContainer, .actionListCostContainer, .actionListEndingResourcesContainer, .actionListSubmitContainer, .actionListIncomeContainer, .actionListDesperationContainer
+{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 4px;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  margin-right: 4px;
+  padding: 0px;
+  border: 2px solid #FFFFFF;
+  position: relative;
+  z-index: 1;
+  box-shadow: 7px 7px 50px #000000;
+}
+
+.actionListActionsContainer
+{
+  background: #062446;
+  cursor: default;
+}
+.actionListSubmitContainer
+{
+  background: #1362A8;
+  margin-top: 2px;
+  cursor: default;
+}
+
+.actionListIncomeContainer
+{
+  background: #232629;
+  cursor: default;
+}
+
+/* The top bars of the ActionList containers */
+.startingResourcesTopBar, .actionsTopBar, .taxesTopBar, .costTopBar, .endingResourcesTopBar, .submitTopBar, .incomeTopBar, .desperationTopBar, .previousActionsTopBar
+{
+  font-family: sans-serif;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  height: 25px;
+  margin: 0px;
+  margin-top: -2px;
+  margin-left: -2px;
+  padding: 0px;
+  border-radius: 10px 10px 0px 0px;
+  position: relative;
+  cursor: default;
+}
+.actionsTopBar
+{
+  background: #85B2E5;
+  border: 2px solid #FFFFFF;
+  color: #062446;
+}
+.previousActionsTopBar
+{
+  background: #85B2E5;
+  border: 2px solid #FFFFFF;
+  color: #000000;
+  height: 50px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.submitTopBar
+{
+  background: #02325C;
+  border: 2px solid #FFFFFF;
+  color: #AECEEB;
+}
+
+.taxesTopBar
+{
+  background: #C00024;
+  border: 2px solid #FFFFFF;
+  color: #450F19;
+
+}
+
+.desperationTopBar
+{
+  background: #000000;
+  border: 2px solid #FFFFFF;
+  color: white;
+}
+
+.startingResourcesTopBar, .costTopBar, .endingResourcesTopBar
+{
+  background: #5FA351;
+  border: 2px solid #FFFFFF;
+  color: #24441D;
+}
+
+.incomeTopBar
+{
+  background: #A9B2BA;
+  border: 2px solid #FFFFFF;
+  color: #1C2A36;
+}
+
+.previousActionsHeaderIcon
+{
+  display: inline-block;
+  background-size: 100%;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  margin-left: 6px;
+}
+
+.previousActionHeaderText
+{
+  display: inline-block;
+  height: 35px;
+  display: inline-block;
+  position: absolute;
+  vertical-align: middle;
+  margin: 3px;
+  margin-left: 6px;
+}
+
+/* The text inside the top bar of the ActionList containers */
+.actionListHeaderText
+{
+  vertical-align: middle;
+  margin: auto;
+  margin-top: 8px;
+}
+
+
+/* One single item in a container in the ActionList */
+.actionListItem
+{
+  width: 100%;
+  height: 35px;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.actionListItem:last-child
+{
+  border-radius: 0px 0px 8px 8px;
+}
+
+.actionListItem-income
+{
+  background-color: #232629;
+}
+
+.actionListItem-balance
+{
+  background-color: #26AB09;
+}
+
+.actionListItem-deficit
+{
+  background-color: #FF0000;
+}
+
+.actionListItem-taxes
+{
+  background-color: #04112E;
+}
+
+.actionListItem-desperation
+{
+  background-color: black;
+  cursor: default;
+}
+
+.actionListItem-spending
+{
+  background-color: #550000;
+}
+
+.actionListItem-action
+{
+  background-color: #1362A8;
+  cursor: default;
+}
+.actionListItem-action:hover
+{
+  background-color: #1362A8;
+  box-shadow: 0px 0px 0px 2px white inset;
+}
+
+.actionListItem-withdraw
+{
+  background-color: orange;
+  cursor: default;
+}
+
+/* The icon for an individual ActionList item */
+.actionListIcon
+{
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  background-size: 100%;
+  margin-left: 6px;
+  margin-top: 3px;
+  float: left;
+  border: 2px solid #000000;
+  display: inline-block;
+}
+
+/* Styles for the text portion of an ActionList item */
+.actionListNotesLeftFloat, .actionListNotesLeftFloatBold
+{
+  float: left;
+  color: #FFFFFF;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  margin: 6px;
+  margin-top: 10px;
+  margin-right: 12px;
+  cursor: inherit;
+}
+
+.actionListNotesLeftFloatBold
+{
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.actionListNotesCentered
+{
+  display: inline-block;
+  color: #FFFFFF;
+  font-family: sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  vertical-align: middle;
+  margin-top: 16px;
+  cursor: inherit;
+}
+
+/* Styles for the resource portions of an ActionList item */
+.actionListCost, .actionListCost-black
+{
+  display: inline-block;
+  float: right;
+  color: #FF0000;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 6px;
+  margin-top: 10px;
+  margin-right: 12px;
+  cursor: inherit;
+}
+
+.actionListCost-black
+{
+  color: black;
+}
+
+.actionListAvailableResources
+{
+  float: right;
+  display: inline-block;
+  color: #FFFFFF;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 6px;
+  margin-top: 10px;
+  margin-right: 12px;
+  cursor: inherit;
+}
+
+/* The button for submitting a turn */
+.actionListSubmitTurn, .actionListClearActions, .actionListToggleView
+{
+  width: 30px;
+  height: 30px;
+  background-size: 100%;
+  float: right;
+  border-radius: 100%;
+  position: relative;
+  margin-top: 3px;
+  margin-right: 3px;
+  border: 2px solid #000000;
+  cursor: pointer;
+}
+
+.actionListSubmitTurn:hover, .actionListClearActions:hover, .actionListToggleView:hover
+{
+  border-color: #FFFFFF;
+}
+
+.actionListTrashCan
+{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-image: url('images/icon_cancel-100px.png');
+  background-size: auto 80%;
+  width: 100%;
+  height: 100%;
+  opacity: 0.0;
+}
+
+.actionListTrashCan:hover
+{
+  opacity: 1.0;
+}
