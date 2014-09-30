@@ -1413,7 +1413,7 @@ function UI (mapLoadedCB, addActionCB, removeActionCB, clearActionsCB, submitTur
       }
       return Math.floor(value).toString();// + '%';
     }
-    return '';
+    return '0';
   };
 
   //----------------------------------------------------------------------------

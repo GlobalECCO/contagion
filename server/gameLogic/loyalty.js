@@ -48,7 +48,7 @@ var addFocusedLoyalty = function(gameState, playerIndex) {
 
   // Set the loyalty of the first territory to max loyalty for this player
   for (var territoryIndex = 0; territoryIndex < gameState.countries[loyalCountryIndex].territories.length; ++territoryIndex) {
-    addLoyaltyToOpenTerritory(gameState.countries[loyalCountryIndex].territories, playerIndex, 1);
+    addLoyalty(gameState.countries[loyalCountryIndex].territories[territoryIndex], playerIndex, 1);
   }
 }
 
@@ -58,10 +58,7 @@ var addScatteredLoyalty = function(gameState, playerIndex) {
   for (var loyaltyPoint = 0; loyaltyPoint < 3; ++loyaltyPoint) {
     // Pick a random country that has no loyalty to any player
     var loyalCountryIndex = getRandomAccessibleCountry(gameState, playerIndex);
-
-    // Add one point of loyalty to the first territory for this player
-    var territories = gameState.countries[loyalCountryIndex].territories;
-    addLoyaltyToOpenTerritory(territories, playerIndex, 1);
+    shiftCountryLoyalty(gameState.countries[loyalCountryIndex], 'boost', playerIndex, 1);
   }
 }
 
@@ -311,18 +308,6 @@ var getLeastLoyalTerritoryIndex = function(country, playerIndex, target) {
   }
 
   return leastLoyalTerritory;
-};
-
-//------------------------------------------------------------------------------
-// Add loyalty to the given player in this territory
-var addLoyaltyToOpenTerritory = function(territories, playerIndex, influencePoints) {
-  for (var territoryIndex = 0; territoryIndex < territories.length; ++territoryIndex) {
-    var territory = territories[territoryIndex];
-
-    if (territory.loyalToWhom === -1) {
-      addLoyalty(territory, playerIndex, influencePoints);
-    }
-  }
 };
 
 //------------------------------------------------------------------------------

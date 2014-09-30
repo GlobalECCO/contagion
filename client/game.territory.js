@@ -26,27 +26,27 @@ function GameTerritory(svgObj) {
     makeDarker = true && makeDarker;
     this.svgObj.attr('stroke-width', strokeWidth);
     if (makeDarker) {
-    
+
       var strokeColor = {r: '', g: '', b: ''};
-      
+
       // separate each color component and convert hex to decimal
       strokeColor['r'] = parseInt(color.slice(1,3), 16);
       strokeColor['g'] = parseInt(color.slice(3,5), 16);
       strokeColor['b'] = parseInt(color.slice(5), 16);
-      
+
       // reduce each color by a factor of 'darknessFactor' and convert back to hex as string
       for (var component in strokeColor) {
         strokeColor[component] = Math.floor(strokeColor[component] * darknessFactor);
         strokeColor[component] = strokeColor[component].toString(16);
         strokeColor[component] = strokeColor[component].length < 2 ? "0" + strokeColor[component] : strokeColor[component];
       };
-      
+
       //concatenate all separated color components
       var strokeColorString = '#'.concat();
       for (var component in strokeColor) {
         strokeColorString = strokeColorString.concat(strokeColor[component]);
       };
-      
+
       // set stroke color
       this.svgObj.stroke(strokeColorString);
     }
@@ -101,5 +101,11 @@ function GameTerritory(svgObj) {
   // Set the Territory's color as a hex string '#0123456'
   this.setText = function(newText) {
     this.svgText.text(newText);
+    if (newText === '0') {
+      this.svgText.style('visibility', 'hidden');
+    }
+    else {
+      this.svgText.style('visibility', 'visible');
+    }
   };
 }

@@ -44,7 +44,7 @@ function PreviousActionList(pageRoot, listClass) {
   // ---------------------------------------------------------------------------
   this.removePreviousActionList = function (gameState, currentPlayerIndex) {
     for (var contIndex = 0; contIndex < playerActionContainers.length; ++contIndex) {
-      playerActionContainers[contIndex].rootElement.remove();
+      $(playerActionContainers[contIndex].rootElement).remove();
     }
     playerActionContainers = [];
   };

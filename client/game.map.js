@@ -79,7 +79,6 @@ function GameMap(parentElement) {
             self.svgDoc.viewbox(self.coords.x, self.coords.y - padding, self.coords.width, self.coords.height + padding * 2.25);
 
             loaded = true;
-
             loadCompleteCallback && loadCompleteCallback();
           }
         };
@@ -189,12 +188,12 @@ function GameMap(parentElement) {
 
   var setupCountryClicker = function(svgElem, country) {
     // Redirect mouse events for the country background to deliver information about that country
-    svgElem.click(function(event) {
-      event.cancelBubble = true; // Don't let the map get this click event
+    $(svgElem.node).click(function(event) {
+      event.stopPropagation(); // Don't let the map get this click event
       onCountryClick(country);
     });
-    svgElem.mouseover(function() { onCountryMouseOver(country); });
-    svgElem.mouseout(function() { onCountryMouseOut(country); });
+    $(svgElem.node).mouseover(function() { onCountryMouseOver(country); });
+    $(svgElem.node).mouseout(function() { onCountryMouseOut(country); });
   }
 
   //----------------------------------------------------------------------------
@@ -235,6 +234,10 @@ function GameMap(parentElement) {
         setupCountryClicker(svgChild, newCountry);
       }
       else if (svgChild instanceof SVG.Ellipse) {
+        // Internet Explorer can't calculate the position of something with display of none,
+        // but can calculate it for something with visibility hidden...
+        svgChild.attr('display', '');
+        svgChild.attr('visibility', 'hidden');
         newCountry.controlIcon = svgChild;
         setupCountryClicker(svgChild, newCountry);
       }

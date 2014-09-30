@@ -59,13 +59,14 @@ function Tutorial(gameController, initialGameState, playerID) {
       },
 
       {
-        el: 'g[id^="merson2"][id*="_5_"]',
+        el: 'g[id^="Nation2"]:first',
         svgElement: true,
         tip: {
           title: 'Loyalty',
           content: 'Each population segment is either neutral or loyal to one player.  The loyalty strength is ' +
                    'between 0 (neutral) and 100 (completely loyal).',
           tipJoint: 'left',
+          offset: [-45, 30],
         },
         action: null,
         delay: self.normalDelay,
@@ -1343,6 +1344,8 @@ function Tutorial(gameController, initialGameState, playerID) {
     else {
       var $clone = $el.clone(true);
     }
+    $clone.off('mouseenter');
+    $clone.off('mouseleave');
     $clone.data('source', $el);
     $clone.data('offset', item.offset);
     $clone.data('sizeOffset', item.sizeOffset);
@@ -1412,9 +1415,7 @@ function Tutorial(gameController, initialGameState, playerID) {
       $box.data('source', $el);
       self.foreground.append($box);
       $box.click(function(event) {
-        var clickEvent = document.createEvent("SVGEvents");
-        clickEvent.initEvent("click", true, true);
-        element.dispatchEvent(clickEvent);
+        $el.click();
         event.stopPropagation();
         self.onFinished();
       });
@@ -1449,10 +1450,10 @@ function Tutorial(gameController, initialGameState, playerID) {
 
   //----------------------------------------------------------------------------
   Tutorial.prototype.adjustBoundingBoxByMargins = function(bbox, $el, offset, sizeOffset) {
-    var leftMargin = self.getCSSIntValue($el, 'border-left');
-    var rightMargin = self.getCSSIntValue($el, 'border-right');
-    var topMargin = self.getCSSIntValue($el, 'border-top');
-    var bottomMargin = self.getCSSIntValue($el, 'border-bottom');
+    var leftMargin = self.getCSSIntValue($el, 'border-left-width');
+    var rightMargin = self.getCSSIntValue($el, 'border-right-width');
+    var topMargin = self.getCSSIntValue($el, 'border-top-width');
+    var bottomMargin = self.getCSSIntValue($el, 'border-bottom-width');
     if (offset !== undefined) {
       bbox.left += offset[0];
       bbox.top += offset[1];
